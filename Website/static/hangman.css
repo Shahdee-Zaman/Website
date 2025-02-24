@@ -1,0 +1,70 @@
+nav{
+    font-size: 3vb;  color: #f66d6d;     text-decoration: none; display: flex;
+    justify-content: space-between;
+}
+nav a:hover{
+    background: #e8e8e8; border-radius: 50px;
+}
+nav a{
+    text-decoration: inherit; color: inherit; display: flex; padding: 2px 5px;
+}
+
+.dropdown button{
+    text-decoration: inherit; color: inherit; border: none; background: none;
+    font-size: inherit;  cursor: pointer; border-radius: 50px;
+    display: flex;
+}
+
+.dropdown button:hover{
+    background: rgb(232, 232, 232);
+}
+.options{
+    display: none; text-decoration: red; position: absolute; overflow: hidden;
+}
+.dropdown:hover .options{
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background: rgba(225, 225, 225, 0.96); color: #da83eb; width: 125px;
+    transform: translateX(-15%);
+}
+.options a:hover{
+    background: rgb(200, 198, 198);  text-align: center;
+}
+
+
+
+
+
+
+header{
+    text-align: center; height: 20px; display: inline-block; margin-left: 35vi;
+}
+header p{
+   font-size: 3vi; display: inherit; text-align: inherit;
+}
+header img{
+    width: 3.5vi; text-decoration: none; text-align: inherit;
+}
+#attempts{
+    color: darkblue; margin-top: 5vb; font-size: 35px;
+}
+.drawing{
+    width: 100%; height: 25vb; border-style: dashed; margin-top: 35px; font-size: 3vi; text-align: center;
+}
+.game{
+    text-align: center; font-size: 25px;
+}
+#found{
+    color: darkgreen; margin-top: 55px;
+}
+.guess{
+    display: flex;
+    align-items: center; justify-content: center; font-size: 25px; margin: 1vb;
+}
+#submit{
+    border-radius: 20px; background: #d5f8f5; font-family: Teko, sans-serif;
+}
+#attempt{
+    color: darkred;
+}

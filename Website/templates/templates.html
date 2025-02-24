@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../static/website.css">
+</head>
+<body>
+<div class="background">
+</div>
+<nav>
+    <a href="http://127.0.0.1:5000">Home</a>
+    <div class="dropdown">
+        <button>Games</button>
+        <div class="options">
+            <a href=" {{ url_for('hangman') }} ">Hangman</a>
+            <a href="">Coming Soon</a>
+            <a href="">Coming Soon</a>
+        </div>
+    </div>
+    <a href="https://github.com/Shahdee-Zaman?tab=projects">GitHub</a>
+    <a href="https://docs.google.com/document/d/1uAjW69JKYgUO1i74-87EXA6XS1Tjq3SGXScivz_e1qE/export?format=pdf">Resume</a>
+    <a href="mailto:Shahdeezaman@gmail.com">Contact Me</a>
+
+</nav>
+<hr>
+<br>
+<button id="theme-toggle">🌙 Dark Mode</button>
+
+
+<div class="middle">Welcome to my Website!</div>
+<p id ="intro"> Hi, I am Shahdee Zaman  a Computer Science graduate with a passion for software development,
+    problem-solving, and technology innovation. Proficient in Python, C++, and Java,
+    I have hands-on experience in developing scalable applications, optimizing algorithms, and implementing object-oriented programming principles.
+    My expertise extends to full-stack development, software engineering, and cloud computing, with projects ranging from
+    database management systems to algorithmic implementations.
+    I am always eager to learn new technologies and contribute to meaningful, high-impact solutions.</p>
+
+<span id="Socials">Find me at: <br>
+    <a href="linkedin.com/in/shahdee-zaman-35455a276">LinkedIn</a> <br>
+    <a href="mailto:Shahdeezaman@gmail.com">Email</a>
+</span>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme");
+
+        // If the user has a preference, apply it
+        if (currentTheme === "light") {
+            document.body.classList.add("light-mode");
+            toggleButton.textContent = "🌑 Light Mode";
+            }
+
+        toggleButton.addEventListener("click", function () {
+            document.body.classList.toggle("light-mode");
+
+            // Save the user's preference in localStorage
+            if (document.body.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
+                toggleButton.textContent = "🌑 Light Mode";
+            } else {
+                localStorage.setItem("theme", "dark");
+                toggleButton.textContent = "🌙 Dark Mode";
+                }
+            });
+        });
+</script>
+
+
+</body>

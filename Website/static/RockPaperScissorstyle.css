@@ -1,0 +1,6 @@
+.Choices{
+    width: 33%; display: flex;
+}
+.Rock{
+    background-image: url('img/r.jpg'); width: 33%; height: 33%
+}
