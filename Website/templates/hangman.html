@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../static/hangman.css">
+</head>
+<body>
+<nav>
+    <a href=" {{ url_for('index') }} ">Home</a>
+    <div class="dropdown">
+        <button>Games</button>
+        <div class="options">
+            <a href=" {{ hangman }} ">Hangman</a>
+            <a href="">Coming Soon</a>
+            <a href="">Coming Soon</a>
+        </div>
+    </div>
+    <a href="https://github.com/Shahdee-Zaman?tab=projects">GitHub</a>
+    <a href="https://docs.google.com/document/d/1uAjW69JKYgUO1i74-87EXA6XS1Tjq3SGXScivz_e1qE/export?format=pdf">Resume</a>
+    <a href="mailto:Shahdeezaman@gmail.com">Contact Me</a>
+
+</nav>
+
+<header> <p>Welcome to Hangman!</p>
+  <img src="https://png.pngitem.com/pimgs/s/110-1102973_hangman-figure-hangman-stick-figure-hd-png-download.png">
+</header>
+<div class="game" id="attempts">Attempts: {{attempts}} </div>
+<div class="draw">
+    <div class="drawing">
+        <img src= " {{ hangman }}" alt="../img/hangman_stage_0.png">
+    </div>
+</div>
+<div class="game" id="found"> Words Found: {{blank}} </div>
+
+<form action =" {{ url_for('hangman') }} " method="post">
+    <div class="guess">
+    <label for="user_guess" class="guess"> Guess your letter:
+    <input id="user_guess"  class="guess" type="text" name="guess_user" minlength="1" maxlength="1" required autofocus>
+    </label>
+    <input type="submit" class="guess" id="submit" value="Guess!">
+
+    </div>
+
+</form>
+
+<div class="game" id="attempt">Words attempted: {{guess}} <br>
+    <a href=" {{ url_for('restart') }} " class="game"> <button> Restart!</button></a>
+</div>
+
+</body>
+</html>

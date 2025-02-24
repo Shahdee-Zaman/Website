@@ -1,0 +1,109 @@
+body{
+    background-color: #08020a;
+    background-image: url("img/bgdark.jpg"); background-repeat: no-repeat; background-size: 100% 100%;
+    background-attachment: fixed;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+}
+.light-mode {
+    background-image: url("https://i.pinimg.com/originals/f8/ea/e0/f8eae0b882afcb9f5b5260c01447e086.jpg");
+    background-size: 100% 100%;
+    color: #121212;
+}
+
+header{
+    text-align: center;color: rgba(96, 29, 29, 0.66); height: 65px; margin: auto;
+}
+nav{
+    font-size: 3vb;  color: white;     text-decoration: none; display: flex;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: inherit; color: inherit; display: flex; padding: 2px 5px;
+}
+nav a:hover{
+    background: #e8e8e8; border-radius: 50px;
+}
+
+/*light Mode*/
+.light-mode nav {
+    color: black;
+}
+.light-mode nav a {
+    color: black;
+}
+.light-mode nav a:hover {
+    background: lightgray;
+}
+
+
+.dropdown button{
+    text-decoration: inherit; color: inherit; border: none; background: none;
+    font-size: inherit;  cursor: pointer; border-radius: 50px;
+ display: flex;
+}
+
+.dropdown button:hover{
+    background: rgb(232, 232, 232);
+}
+.options{
+    display: none; text-decoration: red; position: absolute; overflow: hidden;
+}
+.dropdown:hover .options{
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background: rgba(225, 225, 225, 0.96); color: #da83eb; width: 125px;
+    transform: translateX(-15%);
+
+}
+.options a:hover{
+    background: rgb(200, 198, 198);  text-align: center;
+}
+
+/* Light Mode Dropdown */
+.light-mode .options {
+    background: rgba(50, 50, 50, 0.96);
+    color: white;
+}
+.light-mode .options a:hover {
+    background: rgb(100, 100, 100);
+}
+
+
+
+.middle{
+    text-align: center; color: #da83eb; padding: 30px; font-size: 35px;
+}
+#intro{
+    color: #0ce1f8; width: 45vi; font-size: 2.9vb; float: left; padding: 50px; text-shadow: 0px 0px 10px rgba(216, 191, 216, 0.8);
+}
+#Socials{
+    color:lightgoldenrodyellow; float: right; width: 15vi; font-size: 2.5vb;
+}
+#Socials a {
+    text-decoration: none;
+    color: #8df8f8;
+}
+
+#Socials a:hover{
+    background: #2a4c4c; width: 20vi; border-radius: 50px;
+}
+
+
+/* Light Mode Socials */
+.light-mode .middle{
+    color: black;
+}
+.light-mode #intro {
+    color: #090909;
+}
+.light-mode #Socials {
+    color: black;
+}
+.light-mode #Socials a {
+    color: #0055aa;
+}
+.light-mode #Socials a:hover {
+    background: lightgray;
+}

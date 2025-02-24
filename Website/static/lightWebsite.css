@@ -1,0 +1,58 @@
+body{
+    background-color: white;
+    background-repeat: no-repeat; background-size: cover;
+
+}
+.background{
+
+}
+header{
+    text-align: center;color: rgba(96, 29, 29, 0.66); height: 65px; margin: auto;
+}
+nav{
+    font-size: 3vb;  color: #f66d6d;     text-decoration: none; display: flex;
+    justify-content: space-between;
+}
+nav a:hover{
+    background: #e8e8e8; border-radius: 50px;
+}
+nav a{
+    text-decoration: inherit; color: inherit; display: flex; padding: 2px 5px;
+}
+
+.dropdown button{
+    text-decoration: inherit; color: inherit; border: none; background: none;
+    font-size: inherit;  cursor: pointer; border-radius: 50px;
+    display: flex;
+}
+
+.dropdown button:hover{
+    background: rgb(232, 232, 232);
+}
+.options{
+    display: none; text-decoration: red; position: absolute; overflow: hidden;
+}
+.dropdown:hover .options{
+    display: block;
+    text-align: center;
+    padding: 5px 20px;
+    background: rgba(225, 225, 225, 0.96); color: #da83eb; width: 55px;
+}
+.options a:hover{
+    background: rgb(200, 198, 198);  text-align: center;
+}
+.middle{
+    text-align: center; color: #c40fea; padding: 30px; font-size: 35px;
+}
+#intro{
+    color: #ffa85e; width: 60vi; font-size: 2.5vb; float: left; padding: 50px;
+}
+#Socials{
+    color: #919126; float: right; width: 15vi; font-size: 2.5vb;
+}
+#Socials a{
+    text-decoration: none; color: darkcyan; font-size: 2.1vb;
+}
+#Socials a:hover{
+    background: #e8e8e8; width: 20vi; border-radius: 50px;
+}
