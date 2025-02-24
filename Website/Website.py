@@ -1,15 +1,19 @@
+import os
+
 from flask import Flask, render_template, request, redirect, url_for, session
 import random
 
 app = Flask(__name__)
 
-app.secret_key = 'weirdo'
+app.secret_key = os.getenv('web_key', 'default')
 
 
-# Getting the word from a list(will swap to maybe using api once I am better at it)
+# The words on the txt are found from 12Dicts 3esl.txt
+# The words on it were filtered to better suit the hangman game
 def get_word():
-    choices = ['Joule', 'Where', 'Give', 'Me']
-    return random.choice(choices).upper()
+    with open('Hangman_words.txt','r') as f:
+        words = f.read().splitlines()
+    return random.choice(words).upper()
 
 
 # Initializing the  hangman game
@@ -17,7 +21,7 @@ def start():
     session['word'] = get_word()
     session['guess'] = []
     session['tries'] = 0
-    session['blank'] = ['_'] * len(session['word'])
+    session['blank'] = ["_" for _ in session['word']]
     session['attempts'] = 6
 
 
@@ -55,7 +59,6 @@ def hangman():
                 for i in range(len(session['word'])):
                     if session['word'][i] == guessed_word:
                         session['blank'][i] = guessed_word
-                        print(session['blank'])
                     else:
                         session['blank'][i] = session['blank'][i]
 
@@ -72,7 +75,7 @@ def hangman():
         return render_template('hangmanLoss.html', word=session['word'], restart=redirect(url_for('restart')))
 
     return render_template('hangman.html', word=session['word'],
-                           guess=session['guess'], attempts=session['attempts'], blank=session['blank'],
+                           guess=session['guess'], attempts=session['attempts'], blank=" ".join(session['blank']),
                            hangman=drawing(session['tries']), restart=redirect(url_for('restart')))
 
 
