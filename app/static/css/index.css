@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#first {
+    background-image: url("../images/Clear.jpg");
+    background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;
+}
+.introScreen {
+    top: 0%;
+    margin: 0;
+    padding: 0;
+    height: 91vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#intro {
+    position: absolute;
+    display: inline;
+    font-family: monospace;
+    top: 45%;
+    overflow: hidden;
+    font-size: 2em;
+    white-space: nowrap;
+    border-right: .15em black solid;
+    width: 0;
+    animation: typing 4s steps(28, end) forwards;
+}
+@keyframes typing {
+    to {
+        width:28ch;
+    }
+}

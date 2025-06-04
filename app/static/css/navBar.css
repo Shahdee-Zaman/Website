@@ -1,0 +1,107 @@
+
+#container{
+    display: flex;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    backdrop-filter: none;
+    text-decoration: none;
+    top:0;
+}
+#container a:link, #container a:visited, #container a:active, #container a:visited, #container a {
+    text-decoration: none;
+    color: white;
+}
+.weathercall{
+    display: flex;
+    list-style:none;
+    margin:0;
+    position: static;
+    padding: 0;
+    font-size: 300%;
+    width: 20%;
+    justify-content: center;
+}
+#weatherIcon{
+    text-overflow: visible;
+}
+
+.top{
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 20px;
+    gap: 20px;
+    text-decoration-style: dashed;
+    list-style-type: none;
+    margin: 0;
+    justify-content: space-evenly;
+}
+@media (max-width: 760px) {
+    #container{
+        display: block;
+    }
+    .weathercall {
+        display: flex;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        border: none;
+        margin: 0;
+    }
+    .top{
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+    .navbar {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 10px;
+        background: white;
+        border: solid #ccc;
+        transform: translate(50%);
+
+    }
+}
+.top li:hover{
+    background-color: rgba(250, 250, 250, 0.18);
+    background-blend-mode: multiply;
+    box-shadow: 0 0 1em .7em rgba(250, 250, 250, 0.18);
+    border-radius: 1rem;
+}
+.drop{
+    position: relative;
+    padding-bottom: 1%;
+}
+.navbar {
+    position: absolute;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    background: rgba(225, 225, 225, 0.96);
+    color: black;
+    border: solid #ccc;
+    min-width: 150%;
+    min-height: 100%;
+    transform: translate(15%);
+    top: 100%;
+    right: 0;
+    text-align: center;
+
+}
+.drop:hover .navbar{
+    display: flex;
+}
+
+.navitems {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    text-color: black;
+
+}
