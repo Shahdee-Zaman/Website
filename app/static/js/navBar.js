@@ -57,10 +57,10 @@ function background(code, day = 1) {
     console.log(`${current_weather}`)
     console.log(day)
     if (`${current_weather}`=='Clear' && day == 0) {
-        screen.style.backgroundImage = 'url(static/images/Night.jpg)';
+        screen.style.backgroundImage = 'url(static/images/weather/Night.jpg)';
     }
     else {
-        screen.style.backgroundImage = `url(static/images/${current_weather}.jpg)`;
+        screen.style.backgroundImage = `url(static/images/weather/${current_weather}.jpg)`;
     }
 }
 

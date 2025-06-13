@@ -7,15 +7,20 @@
 
 </head>
 <body>
+<div>
     <div id="first">
-        {% include "navBar.html" %}
-    <div class = "introScreen">
-        <span id="intro"> Hello, Welcome To My Website </span>
-        <span id="qoutes"></span>
-    </div>
-    </div>
-    <div id="second">
+            {% include "navBar.html" %}
+        <div class = "introScreen">
+            <span id="intro"> Hello, Welcome To My Website </span>
+            <span id="qoutes"></span>
+            {% include "socials.html" %}
+        </div>
 
     </div>
+
+    <div id="second">
+        {% include "about.html" %}
+    </div>
+</div>
 </body>
 </html>

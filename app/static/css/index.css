@@ -2,16 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    cursor: default;
+    scroll-behavior: smooth;
 }
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 #first {
-    background-image: url("../images/Clear.jpg");
+    background-image: url("../images/weather/Clear.jpg");
     background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;
 }
 .introScreen {
