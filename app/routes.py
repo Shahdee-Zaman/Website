@@ -8,7 +8,7 @@ def index():
 
 @app.route('/weather-api')
 def weatherApi():
-    file_path = 'Your api key'
+    file_path = 'C:\\Users\\shahd\Desktop\\api.txt'
     if not os.path.isfile(file_path):
         print('File not found')
     try:
