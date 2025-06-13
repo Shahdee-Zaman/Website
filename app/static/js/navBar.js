@@ -1,5 +1,7 @@
 let latitude;
 let longitude;
+
+// Get user location to change background according to the weather
 function findLocation() {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
@@ -19,6 +21,7 @@ function findLocation() {
 
 async function getApi() {
     try {
+        // Receive api key through flask routes
         const data = await fetch('/weather-api')
         const api = await data.json();
         weatherLocation(api)
@@ -38,7 +41,6 @@ async function weatherLocation(api) {
         const day = weather.current.is_day
         const icon = weather.current.condition
         changeWeatherIcon(icon)
-        console.log(day)
         background(icon.code, day)
 
     }
@@ -53,9 +55,7 @@ function changeWeatherIcon(weather) {
 
 function background(code, day = 1) {
     const current_weather = codes[code];
-    const screen = document.getElementById('first')
-    console.log(`${current_weather}`)
-    console.log(day)
+    const screen = document.getElementById('navigationBar')
     if (`${current_weather}`=='Clear' && day == 0) {
         screen.style.backgroundImage = 'url(static/images/weather/Night.jpg)';
     }
@@ -118,4 +118,4 @@ codes =  {
 
 
 
- getApi()
+getApi()
