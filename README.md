@@ -4,7 +4,7 @@ This is my currently used website hosted at: www.shahdee.dev. Feel free to check
 
 ## Background
 
-My previous website was extremely barebones as I had created that one right after learning html and css so I wanted to change it. I will try to keep this website constantly updated but I am currently trying to learn pytorch so no new features will added for a whu
+My previous website was extremely barebones as I had created that one right after learning html and css so I wanted to change it. I will try to keep this website constantly updated but I am currently trying to learn pytorch so no new features will added for a small while.
 
 ## Features 
 
