@@ -37,7 +37,6 @@ async function weatherLocation(api) {
         const url = `https://api.weatherapi.com/v1/current.json?key=${api}&q=${position.latitude},${position.longitude}`;
         const response = await fetch(url)
         const weather = await response.json();
-        console.log(weather);
         const day = weather.current.is_day
         const icon = weather.current.condition
         changeWeatherIcon(icon)
