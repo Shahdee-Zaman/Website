@@ -19,32 +19,26 @@ function findLocation() {
 
 }
 
-async function getApi() {
-    try {
-        // Receive api key through flask routes
-        const data = await fetch('/weather-api')
-        const api = await data.json();
-        weatherLocation(api)
-    }
-    catch(error) {
-        console.error(error);
-    }
-}
 
-async function weatherLocation(api) {
+async function weatherLocation() {
     try {
         const position = await (findLocation())
-        const url = `https://api.weatherapi.com/v1/current.json?key=${api}&q=${position.latitude},${position.longitude}`;
+        const url = `/weather?lat=${position.latitude}&lon=${position.longitude}`
         const response = await fetch(url)
-        const weather = await response.json();
-        const day = weather.current.is_day
-        const icon = weather.current.condition
+        const data = await response.json();
+
+        const weather = data.weather
+        const icon = data.icon
+        const code = data.code
+        const day = data.day
+
+
         changeWeatherIcon(icon)
-        background(icon.code, day)
+        background(code, day)
 
     }
     catch(error) {
-        console.log(error);
+        console.error('Error fetching weather from Flask:', error);
     }
 }
 function changeWeatherIcon(weather) {
@@ -115,6 +109,6 @@ codes =  {
 }
 
 
+weatherLocation()
 
 
-getApi()
